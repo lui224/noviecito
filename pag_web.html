@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi noviecito</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ee0b5b;
+            padding: 20px;
+            color: white;
+        }
+        h1 {
+            font-size: 36px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+            gap: 20px;
+            justify-items: center; /* Centrar las imágenes horizontalmente */
+        }
+        .gallery img {
+            max-width: 100%; /* Ajustar el tamaño máximo de las imágenes */
+            height: auto;
+            border-radius: 5px;
+        }
+        .playlist {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        iframe {
+            width: 100%;
+            height: 80px;
+            border: none;
+        }
+        .activity {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .love-letter {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            resize: none;
+            border: none;
+            background-color: transparent;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        button {
+            background-color: #fd6081;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        button:hover {
+            background-color: #d54727;
+        }
+        #premio {
+            display: none;
+        }
+	/* Estilos para la cuponera */
+        .coupon-container {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+.coupon-list {
+    list-style-type: none; /* Quita los puntos de la lista */
+    padding: 0;
+}
+.coupon-list li {
+    margin-bottom: 20px; /* Añade margen en la parte inferior de cada cupón */
+}
+.coupon {
+    background-color: #fd6081;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Feliz día, corazoncito</h1>
+    </header>
+    <div class="container">
+        <div class="gallery">
+            <img src="foto1.jpg" alt="Imagen 1">
+            <img src="foto5.jpg" alt="Imagen 2">
+            <img src="foto3.jpg" alt="Imagen 3">
+            <img src="foto4.jpg" alt="Imagen 4">
+        </div>
+
+        <div class="Rolitas para mi noviecito <3">
+            <h2>Rolitas para mi noviecito <3</h2>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4AVFRT5VZsQoGniSmQqTuQ?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+
+        <div class="activity">
+            <h2>Actividad <3</h2>
+            <p>1.-¿Cuál es el color especial?<br>
+            <input type="text" id="respuesta1"></p>
+            
+            <p>2.- ¿Cuándo comenzamos a ser noviecitos?<br>
+            <input type="text" id="respuesta2"></p>
+            
+            <p>3.- ¿Cuál es mi comida (guarnición) favorita? <br>
+            <input type="text" id="respuesta3"></p>
+	    
+	    <p>4.- ¿Cuál es mi flor favorita? <br>
+            <input type="text" id="respuesta4"></p>
+	    
+	    <p>5.- ¿Cuál es nuestro lugar favorito? <br>
+            <input type="text" id="respuesta5"></p>
+            
+            <button onclick="verificarRespuestas()">Verificar</button>
+            
+            <div id="premio">
+                <h3>Felicidades, has respondido todas las preguntas correctamente.</h3>
+                
+    <div class="coupon-container">
+            <h2>Cuponera de Regalos</h2>
+            <ul class="coupon-list">
+                <li><span class="coupon">Cupón para un Masaje Relajante</span></li>
+                <li><span class="coupon">Cupón para una Noche Romantica</span></li>
+	        <li><span class="coupon">Cupón para un Paseo Romantico al Aire Libre</span></li>
+                <li><span class="coupon">Cupón para un Día sin Quejas</span></li>
+                <li><span class="coupon">Cupón para un Día de Senderismo</span></li>
+                <li><span class="coupon">Cupón para una Lección de Baile Juntos</span></li>
+	        <li><span class="coupon">Cupón para una Noche de Karaoke</span></li>
+                <li><span class="coupon">Cupón para un Día de Exploración de Museos</span></li>
+                <li><span class="coupon">Cupón para un Día de Futbol</span></li>
+	        <li><span class="coupon">Cupón para que me Tomes Fotos</span></li>
+            </ul>
+	    <a href="cuponera.pdf" target="_blank">Descargar cuponera</a>
+        </div>
+
+		</div>
+            </div>
+
+	    <p id="intentar-nuevo">Sigue intentando, bonitop <3 </p>
+        </div>
+
+        <div class="love-letter">
+            <h2>Una cartita con todo mi corazón </h2>
+            <textarea readonly>
+            Para mi querido noviecito <3, 
+
+Mi niño, cada día a tu lado es un regalo que atesoro con todo mi corazón. 
+
+No puedo evitar sonreír cuando pienso en los momentos que hemos compartido, las risas compartidas y los abrazos cálidos. Tú, con tu ternura y cariño, has iluminado mi vida de una manera que nunca imaginé. Eres la razón por la que mi corazón late con tanta alegría.
+
+El amor que siento por ti es profundo y sincero. Quiero que sepas que cada día que pasa, mi amor por ti crece más y más. No puedo imaginar mi vida sin ti, y estoy emocionada por cada día que tendremos para seguir construyendo nuestros sueños juntos.
+
+Eres mi confidente, mi compañero y mi refugio en este mundo a veces agitado. Quiero que sepas que siempre estaré aquí para ti, para apoyarte en cada paso del camino, en cada desafío que enfrentemos y en cada sueño que persigamos juntos.
+
+Hoy quiero renovar mi compromiso contigo y decirte que te amo con todo mi ser. Eres el amor de mi vida, y no deseo nada más que un futuro a tu lado, compartiendo cada instante, cada caricia y cada suspiro.
+
+Feliz Día del Novio, mi amorcito. 
+ 
+														Tu noviecita bonitap
+            </textarea>
+        </div>
+    </div>
+
+    <script>
+        function verificarRespuestas() {
+            var respuesta1 = document.getElementById("respuesta1").value.toLowerCase();
+            var respuesta2 = document.getElementById("respuesta2").value.toLowerCase();
+            var respuesta3 = document.getElementById("respuesta3").value.toLowerCase();
+	    var respuesta4 = document.getElementById("respuesta4").value.toLowerCase();
+	    var respuesta5 = document.getElementById("respuesta5").value.toLowerCase();
+
+            if (respuesta1 === "verde" && respuesta2 === "21/09/2019" && respuesta3 === "papitas a la francesa" && respuesta4 === "obelisco" && respuesta5 === "casita") {
+                document.getElementById("premio").style.display = "block";
+                document.getElementById("intentar-nuevo").style.display = "none"; // Oculta el mensaje "Sigue intentando"
+            } else {
+                document.getElementById("intentar-nuevo").style.display = "block"; // Muestra el mensaje "Sigue intentando"
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+

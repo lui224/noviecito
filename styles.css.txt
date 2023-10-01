@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f3f3f3;
+}
+
+.flower-container {
+    position: relative;
+    width: 100px;
+    height: 150px;
+}
+
+.flower {
+    width: 50px;
+    height: 50px;
+    background-color: #ff5733;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    animation: bloom 3s ease-in-out infinite;
+}
+
+@keyframes bloom {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
